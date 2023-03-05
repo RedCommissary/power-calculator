@@ -33,26 +33,42 @@ with dpg.window(tag="MainWindow"):
     dpg.add_drag_float(label="Ripple current, %", width=150, pos=[10, 135], tag="ripple_current", min_value=1, max_value=100, default_value=30, format='%.0f')
     dpg.add_drag_float(label="N phase", width=150, pos=[10, 160], tag="quantity_phase", min_value=1, max_value=256, default_value=1, format='%.0f')
 
-    dpg.add_drag_float(label="Ripple Vin, mV", width=150, pos=[10, 220], tag="ripple_vin", min_value=1, max_value=10000, default_value=500, format='%.0f')
-    dpg.add_drag_float(label="Ripple Vout, mV", width=150, pos=[10, 245], tag="ripple_vout", min_value=1, max_value=10000, default_value=25, format='%.0f')
+    dpg.add_drag_float(label="Ripple Vin, mV", width=150, pos=[10, 200], tag="ripple_vin", min_value=1, max_value=10000, default_value=500, format='%.0f')
+    dpg.add_drag_float(label="Ripple Vout, mV", width=150, pos=[10, 225], tag="ripple_vout", min_value=1, max_value=10000, default_value=25, format='%.0f')
 
-    dpg.add_drag_float(label="I gate, A", width=150, pos=[10, 305], tag="i_gate_driver", min_value=0, max_value=100, default_value=2, format='%.1f')
-    dpg.add_drag_float(label="Inductor DCR, mOhms", width=150, pos=[10, 330], tag="inductor_dcr", min_value=0, max_value=100000, default_value=3, format='%.1f')
+    dpg.add_drag_float(label="V gate, V", width=150, pos=[10, 265], tag="v_gate_driver", min_value=0, max_value=100, default_value=2, format='%.1f')
+    dpg.add_drag_float(label="I gate, A", width=150, pos=[10, 290], tag="i_gate_driver", min_value=0, max_value=100, default_value=2, format='%.1f')
+    dpg.add_drag_float(label="Inductor DCR, mOhms", width=150, pos=[10, 315], tag="inductor_dcr", min_value=0, max_value=100000, default_value=3, format='%.1f')
 
-    dpg.add_drag_float(label="VT1 Rds_on, mOhms", width=150, pos=[10, 390], tag="vt1_r_channel", min_value=0, max_value=10000, default_value=4, format='%.1f')
-    dpg.add_drag_float(label="VT1 Qgs, nC", width=150, pos=[10, 415], tag="vt1_qgs", min_value=0, max_value=10000, default_value=2, format='%.1f')
-    dpg.add_drag_float(label="VT1 Qgd, nC", width=150, pos=[10, 440], tag="vt1_qgd", min_value=0, max_value=10000, default_value=1, format='%.1f')
-    dpg.add_drag_float(label="VT1 Qrr, nC", width=150, pos=[10, 465], tag="vt1_qrr", min_value=0, max_value=10000, default_value=4, format='%.1f')
+    dpg.add_drag_float(label="VT1 Rds_on, mOhms", width=150, pos=[10, 355], tag="vt1_r_channel", min_value=0, max_value=10000, default_value=4, format='%.1f')
+    dpg.add_drag_float(label="VT1 Qgs, nC", width=150, pos=[10, 380], tag="vt1_qgs", min_value=0, max_value=10000, default_value=2, format='%.1f')
+    dpg.add_drag_float(label="VT1 Qgd, nC", width=150, pos=[10, 405], tag="vt1_qgd", min_value=0, max_value=10000, default_value=1, format='%.1f')
+    dpg.add_drag_float(label="VT1 Qrr, nC", width=150, pos=[10, 430], tag="vt1_qrr", min_value=0, max_value=10000, default_value=4, format='%.1f')
+    dpg.add_drag_float(label="VT1 Qg, nC", width=150, pos=[10, 455], tag="vt1_qg", min_value=0, max_value=10000, default_value=4, format='%.1f')
     
-    dpg.add_drag_float(label="VT2 Rds_on, mOhms", width=150, pos=[10, 525], tag="vt2_r_channel", min_value=0, max_value=10000, default_value=4, format='%.1f')
-    dpg.add_drag_float(label="VT2 Qgs, nC", width=150, pos=[10, 550], tag="vt2_qgs", min_value=0, max_value=10000, default_value=2, format='%.1f')
-    dpg.add_drag_float(label="VT2 Qgd, nC", width=150, pos=[10, 575], tag="vt2_qgd", min_value=0, max_value=10000, default_value=1, format='%.1f')
-    dpg.add_drag_float(label="VT2 Qrr, nC", width=150, pos=[10, 600], tag="vt2_qrr", min_value=0, max_value=10000, default_value=4, format='%.1f')
+    dpg.add_drag_float(label="VT2 Rds_on, mOhms", width=150, pos=[10, 495], tag="vt2_r_channel", min_value=0, max_value=10000, default_value=4, format='%.1f')
+    dpg.add_drag_float(label="VT2 Qgs, nC", width=150, pos=[10, 520], tag="vt2_qgs", min_value=0, max_value=10000, default_value=2, format='%.1f')
+    dpg.add_drag_float(label="VT2 Qgd, nC", width=150, pos=[10, 545], tag="vt2_qgd", min_value=0, max_value=10000, default_value=1, format='%.1f')
+    dpg.add_drag_float(label="VT2 Qrr, nC", width=150, pos=[10, 570], tag="vt2_qrr", min_value=0, max_value=10000, default_value=4, format='%.1f')
+    dpg.add_drag_float(label="VT2 Qg, nC", width=150, pos=[10, 595], tag="vt2_qg", min_value=0, max_value=10000, default_value=4, format='%.1f')
 
-    dpg.add_drag_float(label="Pout, W", width=150, pos=[450, 440], tag="p_out", min_value=0, max_value=50000, default_value=0, format='%.1f')
-    dpg.add_drag_float(label="Efficiency, %", width=150, pos=[450, 465], tag="efficiency", min_value=0, max_value=100, format='%.1f')
+    dpg.add_drag_float(label="Pout, W", width=150, pos=[450, 430], tag="p_out", min_value=0, max_value=50000, default_value=0, format='%.1f')
+    dpg.add_drag_float(label="Efficiency, %", width=150, pos=[450, 455], tag="efficiency", min_value=0, max_value=100, format='%.1f')
 
+    dpg.add_drag_float(label="VT1 loss, W", width=150, pos=[450, 495], tag="vt1_loss", min_value=0, max_value=100, format='%.1f')
+    dpg.add_drag_float(label="VT2 loss, W", width=150, pos=[450, 520], tag="vt2_loss", min_value=0, max_value=100, format='%.1f')
+    dpg.add_drag_float(label="Inductor loss, W", width=150, pos=[450, 545], tag="inductor_loss", min_value=0, max_value=100, format='%.1f')
+    dpg.add_drag_float(label="Capacitor loss, W", width=150, pos=[450, 570], tag="cout_loss", min_value=0, max_value=100, format='%.1f')
+    dpg.add_drag_float(label="Total loss, W", width=150, pos=[450, 595], tag="total_loss", min_value=0, max_value=100, format='%.1f')
 
+    dpg.add_drag_float(label="L (min), uH", width=150, pos=[820, 430], tag="l_min", min_value=0, max_value=50000, default_value=0, format='%.1f')
+    dpg.add_drag_float(label="L (nom), uH", width=150, pos=[820, 455], tag="l_nom", min_value=0, max_value=50000, default_value=0, format='%.1f')
+
+    dpg.add_drag_float(label="Cin, uF", width=150, pos=[820, 495], tag="c_in", min_value=0, max_value=50000, default_value=0, format='%.1f')
+    dpg.add_drag_float(label="Cin (ripple), A", width=150, pos=[820, 520], tag="i_ripple_cin", min_value=0, max_value=1000, default_value=0, format='%.1f')
+
+    dpg.add_drag_float(label="Cout, uF", width=150, pos=[820, 570], tag="c_out", min_value=0, max_value=50000, default_value=0, format='%.1f')
+    dpg.add_drag_float(label="ESR (min), mOhms", width=150, pos=[820, 595], tag="esr", min_value=0, max_value=50000, default_value=0, format='%.1f')
 
 dpg.show_viewport()
 dpg.set_primary_window("MainWindow", True)
